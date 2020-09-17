@@ -2,20 +2,22 @@ import React from "react";
 
 (function (wp) {
   var registerPlugin = wp.plugins.registerPlugin;
-  var PluginSidebar = wp.editPost.PluginSidebar;
-  var el = wp.element.createElement;
+  //var el = wp.element.createElement;
+  const { Fragment } = wp.element;
+  const { PluginPreviewMoreMenuItem, PluginPreview } = wp.blockEditor;
 
-  registerPlugin("my-plugin-sidebar", {
-    render: () => {
-      return (
-        <PluginSidebar
-          name="my-plugin-sidebar"
-          icon="admin-post"
-          title="My plugin sidebar 99"
-        >
-          Meta Field 99
-        </PluginSidebar>
-      );
-    },
+  console.log("v3.3 running");
+
+  const PluginPreviewTest = () => (
+    <Fragment>
+      <PluginPreviewMoreMenuItem target="preview-abc" icon="admin-post">
+        Preview ABC3.3
+      </PluginPreviewMoreMenuItem>
+      <PluginPreview name="preview-abc">Content of the ABC3.3</PluginPreview>
+    </Fragment>
+  );
+
+  registerPlugin("plugin-preview-test", {
+    render: PluginPreviewTest,
   });
 })(window.wp);
