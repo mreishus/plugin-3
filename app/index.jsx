@@ -4,16 +4,29 @@ import React from "react";
   var registerPlugin = wp.plugins.registerPlugin;
   //var el = wp.element.createElement;
   const { Fragment } = wp.element;
-  const { PluginPreviewMoreMenuItem, PluginPreview } = wp.blockEditor;
+  const { PluginPreviewMenuItem, PluginPreview } = wp.blockEditor;
 
-  console.log("v3.3 running");
+  console.log("v3.4 running");
 
   const PluginPreviewTest = () => (
     <Fragment>
-      <PluginPreviewMoreMenuItem target="preview-abc" icon="admin-post">
-        Preview ABC3.3
-      </PluginPreviewMoreMenuItem>
-      <PluginPreview name="preview-abc">Content of the ABC3.3</PluginPreview>
+      <PluginPreviewMenuItem deviceName="preview-custom-1">
+        Custom Preview 1 Menu Text
+      </PluginPreviewMenuItem>
+      <PluginPreview deviceName="preview-custom-1">
+        <div>
+          <h4>Custom Preview 1 Content</h4>
+        </div>
+      </PluginPreview>
+
+      <PluginPreviewMenuItem deviceName="preview-custom-2">
+        Custom Preview 2 Menu Text
+      </PluginPreviewMenuItem>
+      <PluginPreview deviceName="preview-custom-2">
+        <div>
+          <h4>Custom Preview 2 Content</h4>
+        </div>
+      </PluginPreview>
     </Fragment>
   );
 
