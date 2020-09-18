@@ -10,21 +10,21 @@ import React from "react";
 
   const PluginPreviewTest = () => (
     <Fragment>
-      <PluginPreviewMenuItem deviceName="preview-custom-1">
+      <PluginPreviewMenuItem previewId="preview-custom-1">
         Custom Preview 1 Menu Text
       </PluginPreviewMenuItem>
-      <PluginPreview deviceName="preview-custom-1">
+      <PluginPreview previewId="preview-custom-1">
         <div>
           <h4>Custom Preview 1 Content</h4>
         </div>
       </PluginPreview>
 
-      <PluginPreviewMenuItem deviceName="preview-custom-2">
+      <PluginPreviewMenuItem previewId="preview-custom-2">
         Custom Preview 2 Menu Text
       </PluginPreviewMenuItem>
-      <PluginPreview deviceName="preview-custom-2">
+      <PluginPreview previewId="preview-custom-2">
         <div>
-          <h4>Custom Preview 2 Content</h4>
+          <h4>Custom Preview 2 Content:</h4>
         </div>
       </PluginPreview>
     </Fragment>
